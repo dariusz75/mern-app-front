@@ -27,6 +27,8 @@ const Input = (props) => {
     label,
     type,
     placeholder,
+    value,
+    valid,
     rows,
     errorText,
     validators,
@@ -34,9 +36,9 @@ const Input = (props) => {
   } = props;
 
   const [inputState, dispatch] = useReducer(inputReducer, {
-    value: "",
-    isValid: false,
+    value: value || "",
     isTouched: false,
+    isValid: valid || false,
   });
 
   useEffect(() => {
