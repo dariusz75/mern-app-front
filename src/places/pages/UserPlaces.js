@@ -6,7 +6,7 @@ import PlaceList from "../components/PlaceList";
 const DUMMY_PLACES = [
   {
     id: "p1",
-    title: "Empire State Building",
+    title: "Empire State Building 111",
     description: "One of the most famous sky scrappers in the world",
     imageUrl:
       "https://newyorkyimby.com/wp-content/uploads/2020/09/DSCN0762-777x1036.jpg",
@@ -16,7 +16,7 @@ const DUMMY_PLACES = [
   },
   {
     id: "p2",
-    title: "Empire State Building",
+    title: "Empire State Building 222",
     description: "One of the most famous sky scrappers in the world",
     imageUrl:
       "https://newyorkyimby.com/wp-content/uploads/2020/09/DSCN0762-777x1036.jpg",
