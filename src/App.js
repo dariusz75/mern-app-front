@@ -1,20 +1,18 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  Switch,
-} from "react-router-dom";
+  Switch
+} from 'react-router-dom';
 
-import "./App.css";
-import { AuthContext } from "./shared/context/authContext";
-
-import MainNavigation from "./shared/components/Navigation/MainNavigation";
-import Users from "./user/pages/Users";
-import UserPlaces from "./places/pages/UserPlaces";
-import NewPlace from "./places/pages/NewPlace";
-import UpdatePlace from "./places/pages/UpdatePlace";
-import Auth from "./user/pages/Auth";
+import Users from './user/pages/Users';
+import NewPlace from './places/pages/NewPlace';
+import UserPlaces from './places/pages/UserPlaces';
+import UpdatePlace from './places/pages/UpdatePlace';
+import Auth from './user/pages/Auth';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
+import { AuthContext } from './shared/context/auth-context';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,7 +39,7 @@ const App = () => {
         <Route path="/places/new" exact>
           <NewPlace />
         </Route>
-        <Route path="/places/:placeId" exact>
+        <Route path="/places/:placeId">
           <UpdatePlace />
         </Route>
         <Redirect to="/" />
@@ -56,7 +54,7 @@ const App = () => {
         <Route path="/:userId/places" exact>
           <UserPlaces />
         </Route>
-        <Route path="/auth" exact>
+        <Route path="/auth">
           <Auth />
         </Route>
         <Redirect to="/auth" />
